@@ -31,7 +31,7 @@ FOLDER_ID=paste the folder ID of the group that profile belongs to
 ```
 ### Edit the websites list
 
-You need to tell the script where he needs to collect cookies from. Simply edit the "websites" array in the main.py file.
+You need to tell the script where it needs to collect cookies from. Simply edit the "websites" array in the main.py file.
 
 ```python
 # This is an example. Add as many as you want. If you want to, you can even remove this array here and add another
