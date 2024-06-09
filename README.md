@@ -7,7 +7,7 @@ This is a tool for automatically visiting determined websites in order to collec
 Simply run the script in guided mode, it will prompt you whatever it needs to start.
 
 ```bash
-python main.py --guided
+python cookie_robot.py --guided
 ```
 
 ## Instructions for non-guided mode
@@ -36,7 +36,7 @@ MLX_PASSWORD=SuperSecretPassword
 PROFILE_TYPE=quick
 PROFILE_ID=
 FOLDER_ID=
-BROWSER_TYPE=stealthfox
+BROWSER_TYPE=mimic
 ```
 ### Edit the websites list
 
@@ -57,9 +57,9 @@ websites = ["https://wikipedia.org/",
 
 On your terminal, run the script with python.
 ```bash
-python main.py
+python cookie_robot.py
 ```
 Or, if you're using the python3 interpreter:
 ```bash
-python3 main.py
+python3 cookie_robot.py
 ```
