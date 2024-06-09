@@ -1,0 +1,10 @@
+{
+   "extensionDescription": {
+      "description": "Description of the extension.",
+      "message": "Godtar nødvendige retningslinjer for informasjonskapsler for jevn nettsidenavigasjon, uten å slette informasjonskapsler."
+   },
+   "extensionName": {
+      "description": "Name of the extension.",
+      "message": "Godta alle informasjonskapsler"
+   }
+}

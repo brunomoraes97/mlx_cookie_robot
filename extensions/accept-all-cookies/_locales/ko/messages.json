@@ -1,0 +1,10 @@
+{
+   "extensionDescription": {
+      "description": "Description of the extension.",
+      "message": "쿠키를 삭제하지 않고 원활한 웹 사이트 탐색을 위해 필요한 쿠키 정책을 수락합니다."
+   },
+   "extensionName": {
+      "description": "Name of the extension.",
+      "message": "Accept all cookies"
+   }
+}

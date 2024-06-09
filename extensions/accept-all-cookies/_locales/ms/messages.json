@@ -1,0 +1,10 @@
+{
+   "extensionDescription": {
+      "description": "Description of the extension.",
+      "message": "Menerima dasar kuki yang diperlukan untuk navigasi tapak web yang lancar, tanpa memadamkan kuki."
+   },
+   "extensionName": {
+      "description": "Name of the extension.",
+      "message": "Terima semua kuki"
+   }
+}

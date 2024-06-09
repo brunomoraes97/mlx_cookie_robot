@@ -1,0 +1,106 @@
+body {
+  -moz-user-select: none;
+  user-select: none;
+  padding: 0;
+  margin: 0;
+}
+
+body * {
+  font-family: 'Inter';
+  font-style: normal;
+}
+
+a[id] {
+  display: block;
+  cursor: pointer;
+  text-decoration: none;
+  padding: 4px;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 15px;
+  color: #1E2533;
+}
+
+#toggle,
+#report {
+  display: none;
+}
+#refresh {
+  display: none;
+  text-align: center;
+  font-size: 200%;
+  padding: 10px;
+  font-weight: bold;
+  color: #cc4223;
+}
+
+.menu {
+  text-align: left;
+  padding: 10px 0;
+  word-wrap: break-word;
+}
+
+.menu-hidden {
+  display: none !important;
+}
+
+h3 {
+  margin-top: 0px;
+}
+
+#report-notes {
+  height: 60px;
+  min-width: 100%;
+  max-width: 100%;
+}
+.settings-block__iframe {
+  width: 300px;
+  height: 530px;
+  position: fixed;
+  top: 200px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.cookie_popup_wrapper {
+  width: 300px;
+  text-align: center;
+  height: 250px;
+}
+
+.cookie_logo {
+  width: 37px;
+  height: 37px;
+  margin-top: 40px;
+  margin-bottom: 10px;
+}
+
+#cookie_host_name {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+  margin: 0;
+  margin-bottom: 25px;
+}
+
+#cookie_handler {
+  width: 260px;
+  height: 34px;
+  background: #66BE99;
+  border-radius: 100px;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 22px;
+  color: #FFFFFF !important;
+  border: none;
+  margin-right: 10px;
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+.cookie_separator{
+  margin: 0;
+  padding-top: 24px;
+  border-bottom: 1px solid #E1E2E2;
+}

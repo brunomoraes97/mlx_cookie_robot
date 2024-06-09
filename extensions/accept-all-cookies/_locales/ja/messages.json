@@ -1,0 +1,10 @@
+{
+   "extensionDescription": {
+      "description": "Description of the extension.",
+      "message": "Cookie を削除せずに、スムーズな Web サイト ナビゲーションに必要な Cookie ポリシーを受け入れます。"
+   },
+   "extensionName": {
+      "description": "Name of the extension.",
+      "message": "Accept all cookies"
+   }
+}

@@ -1,0 +1,10 @@
+{
+   "extensionDescription": {
+      "description": "Description of the extension.",
+      "message": "Çerezleri silmeden web sitesinde sorunsuz gezinme için gerekli çerez politikalarını kabul eder."
+   },
+   "extensionName": {
+      "description": "Name of the extension.",
+      "message": "Tüm çerezleri kabul et"
+   }
+}

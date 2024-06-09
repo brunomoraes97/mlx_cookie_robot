@@ -1,0 +1,10 @@
+{
+   "extensionDescription": {
+      "description": "Description of the extension.",
+      "message": "AdBlock lets you block cookie notifications using the AdBlock extension. "
+   },
+   "extensionName": {
+      "description": "Name of the extension.",
+      "message": "Accept all cookies"
+   }
+}

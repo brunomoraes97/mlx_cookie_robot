@@ -1,0 +1,10 @@
+{
+   "extensionDescription": {
+      "description": "Description of the extension.",
+      "message": "Akceptuje niezbędne zasady dotyczące plików cookie w celu sprawnego poruszania się po witrynie, bez usuwania plików cookie."
+   },
+   "extensionName": {
+      "description": "Name of the extension.",
+      "message": "Zaakceptuj wszystkie pliki cookie"
+   }
+}

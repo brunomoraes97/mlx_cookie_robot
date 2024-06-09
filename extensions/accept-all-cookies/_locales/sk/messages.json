@@ -1,0 +1,10 @@
+{
+   "extensionDescription": {
+      "description": "Description of the extension.",
+      "message": "Akceptuje nevyhnutné zásady používania súborov cookie pre bezproblémovú navigáciu na webových stránkach bez vymazania súborov cookie."
+   },
+   "extensionName": {
+      "description": "Name of the extension.",
+      "message": "Prijať všetky súbory cookie"
+   }
+}

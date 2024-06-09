@@ -1,0 +1,10 @@
+{
+   "extensionDescription": {
+      "description": "Description of the extension.",
+      "message": "Accepteert het noodzakelijke cookiebeleid voor een soepele websitenavigatie, zonder cookies te verwijderen."
+   },
+   "extensionName": {
+      "description": "Name of the extension.",
+      "message": "Accepteer alle cookies"
+   }
+}

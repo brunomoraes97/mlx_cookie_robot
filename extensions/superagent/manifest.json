@@ -1,0 +1,48 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "manifest_version": 2,
+    "name": "superagent - Automatic cookie consent",
+    "version": "3.1.3",
+    "description": "superagent fills out cookie consent forms based on your preferences, saving you time and letting you take control of your privacy.",
+    "permissions": [
+        "http://*/*",
+        "https://*/*",
+        "storage",
+        "tabs",
+        "cookies"
+    ],
+    "background": {
+        "scripts": [
+            "static/js/background.js"
+        ]
+    },
+    "content_scripts": [{
+        "js": [
+            "static/js/content.js"
+        ],
+        "matches": [
+            "http://*/*",
+            "https://*/*"    
+        ],
+        "all_frames": true,
+        "run_at": "document_start",
+        "match_about_blank": true
+    }],
+    "icons": {
+        "32": "images/logo/32.png",
+        "64": "images/logo/64.png",
+        "128": "images/logo/128.png",
+        "256": "images/logo/256.png",
+        "512": "images/logo/512.png",
+        "1024": "images/logo/1024.png"
+    },
+    "browser_action": {
+        "default_title": "superagent",
+        "default_popup": "popup.html"
+    },
+    "options_ui": {
+        "page": "options.html",
+        "open_in_tab": true
+    }
+}

@@ -1,0 +1,10 @@
+{
+   "extensionDescription": {
+      "description": "Description of the extension.",
+      "message": "Accepte les politiques de cookies nécessaires pour une navigation fluide sur le site Web, sans supprimer les cookies."
+   },
+   "extensionName": {
+      "description": "Name of the extension.",
+      "message": "Accepter tous les cookies"
+   }
+}
