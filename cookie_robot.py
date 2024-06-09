@@ -171,14 +171,6 @@ if __name__ == "__main__":
 
         print("\nCookie Robot will collect cookies for you now...\n")
 
-        bot = CookieRobot(email_address=EMAIL,
-                          password=PASSWORD,
-                          websites=WEBSITES,
-                          profile_type=TYPE,
-                          browser_type=BROWSER)
-        
-        bot.run()
-
     # If assistance is not needed, retrieve values from .env file
     else:
 
@@ -195,10 +187,10 @@ if __name__ == "__main__":
         EXTENSION = os.getenv("EXTENSION_PATH")
         BROWSER = os.getenv("BROWSER_TYPE")
 
-        bot = CookieRobot(email_address=EMAIL,
-                          password=PASSWORD,
-                          websites=WEBSITES,
-                          profile_type=TYPE,
-                          browser_type=BROWSER)
-        
-        bot.run()
+    bot = CookieRobot(email_address=EMAIL,
+                      password=PASSWORD,
+                      websites=WEBSITES,
+                      profile_type=TYPE,
+                      browser_type=BROWSER)
+    
+    bot.run()
