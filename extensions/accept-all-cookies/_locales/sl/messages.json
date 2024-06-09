@@ -1,0 +1,10 @@
+{
+   "extensionDescription": {
+      "description": "Description of the extension.",
+      "message": "Sprejema potrebne pravilnike o piškotkih za nemoteno navigacijo po spletnem mestu, brez brisanja piškotkov."
+   },
+   "extensionName": {
+      "description": "Name of the extension.",
+      "message": "Sprejmi vse piškotke"
+   }
+}

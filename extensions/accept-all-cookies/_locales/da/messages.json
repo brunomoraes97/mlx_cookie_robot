@@ -1,0 +1,10 @@
+{
+   "extensionDescription": {
+      "description": "Description of the extension.",
+      "message": "Accepterer nødvendige cookiepolitikker for smidig hjemmesidenavigation uden at slette cookies."
+   },
+   "extensionName": {
+      "description": "Name of the extension.",
+      "message": "Accepter alle cookies"
+   }
+}

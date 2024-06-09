@@ -1,0 +1,10 @@
+{
+   "extensionDescription": {
+      "description": "Description of the extension.",
+      "message": "Pieņem nepieciešamās sīkfailu politikas, lai nodrošinātu netraucētu navigāciju vietnē, neizdzēšot sīkfailus."
+   },
+   "extensionName": {
+      "description": "Name of the extension.",
+      "message": "Pieņemiet visus sīkfailus"
+   }
+}

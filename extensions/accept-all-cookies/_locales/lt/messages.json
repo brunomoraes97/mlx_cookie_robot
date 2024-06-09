@@ -1,0 +1,10 @@
+{
+   "extensionDescription": {
+      "description": "Description of the extension.",
+      "message": "Priima būtiną slapukų politiką, kad būtų galima sklandžiai naršyti svetainėje, neištrinant slapukų."
+   },
+   "extensionName": {
+      "description": "Name of the extension.",
+      "message": "Priimti visus slapukus"
+   }
+}

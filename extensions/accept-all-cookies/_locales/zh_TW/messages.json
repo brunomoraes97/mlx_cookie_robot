@@ -1,0 +1,10 @@
+{
+   "extensionDescription": {
+      "description": "Description of the extension.",
+      "message": "在不删除 cookie 的情况下，接受必要的 cookie 政策以实现顺畅的网站导航。"
+   },
+   "extensionName": {
+      "description": "Name of the extension.",
+      "message": "接受所有 Cookies"
+   }
+}

@@ -1,0 +1,1 @@
+chrome.runtime.onMessage.addListener(((e,n,s)=>("isContentExists"===e.command&&s(!0),!0)));

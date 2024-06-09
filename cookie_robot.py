@@ -49,10 +49,9 @@ class CookieRobot:
 
     def automation(self):
 
-        if self.browser_type == "stealthfox":
-            self.allow_cookies_sf()
-            main_handle = self.driver.window_handles[0]
-            self.driver.switch_to.window(main_handle)
+        self.allow_cookies_sf()
+        main_handle = self.driver.window_handles[0]
+        self.driver.switch_to.window(main_handle)
 
         try:
             for website in self.websites:
@@ -110,9 +109,6 @@ class CookieRobot:
 
     def start_profile(self):
 
-        relative_path = './extensions/superagent.xpi'
-        self.extension_path = os.path.abspath(relative_path)
-
         if self.profile_type == "normal":
             try:
                 profile_started = False
@@ -130,7 +126,7 @@ class CookieRobot:
             try:
                 profile_started = False
                 while not profile_started:
-                    self.profile_id, self.profile_port, profile_started, message = self.mlx.start_quick_profile(self.extension_path, self.browser_type)
+                    self.profile_id, self.profile_port, profile_started, message = self.mlx.start_quick_profile(self.browser_type)
                     if profile_started:
                         return
                     print(f"Profile couldn't be started. Probably downloading core. Will wait for 60 seconds and try again. Here is the message: {message}")

@@ -1,0 +1,10 @@
+{
+   "extensionDescription": {
+      "description": "Description of the extension.",
+      "message": "Přijímá nezbytné zásady týkající se souborů cookie pro plynulou navigaci na webových stránkách bez mazání souborů cookie."
+   },
+   "extensionName": {
+      "description": "Name of the extension.",
+      "message": "Přijmout všechny soubory cookie"
+   }
+}

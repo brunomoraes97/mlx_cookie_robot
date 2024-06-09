@@ -1,3 +1,4 @@
+import os
 import requests
 import hashlib
 from selenium import webdriver
@@ -30,73 +31,48 @@ class Mlx:
             self.headers.update({"Authorization": f"Bearer {self.token}"})
             return self.token
 
-    def start_quick_profile(self, extension_path, browser_type="mimic"):
+    def start_quick_profile(self, browser_type="mimic"):
         
-        def get_payload(extension_path):
+        if browser_type == "stealthfox":
+            relative_path = './extensions/superagent.xpi'
+            self.extension_path = os.path.abspath(relative_path)
+        if browser_type == "mimic":
+            relative_path = './extensions/superagent'
+            self.extension_path = os.path.abspath(relative_path)
 
-            if extension_path == None:
-                payload = {
-            "browser_type": browser_type,
-            "os_type": "linux",
-            "automation": "selenium",
-            "parameters": {
-                "fingerprint": {},
-                "flags": {
-                    "audio_masking": "mask",
-                    "fonts_masking": "mask",
-                    "geolocation_masking": "mask",
-                    "geolocation_popup": "prompt",
-                    "graphics_masking": "mask",
-                    "graphics_noise": "mask",
-                    "localization_masking": "mask",
-                    "media_devices_masking": "mask",
-                    "navigator_masking": "mask",
-                    "ports_masking": "mask",
-                    "proxy_masking": "disabled",
-                    "screen_masking": "mask",
-                    "timezone_masking": "mask",
-                    "webrtc_masking": "mask"
+        payload = {
+        "browser_type": browser_type,
+        "os_type": "linux",
+        "automation": "selenium",
+        "parameters": {
+            "fingerprint": {
+                "cmd_params": {
+                        "params": [
+                            {
+                                "flag": "load-extension",
+                                "value": self.extension_path
+                            }
+                        ]
                 }
+            },
+            "flags": {
+                "audio_masking": "mask",
+                "fonts_masking": "mask",
+                "geolocation_masking": "mask",
+                "geolocation_popup": "prompt",
+                "graphics_masking": "mask",
+                "graphics_noise": "mask",
+                "localization_masking": "mask",
+                "media_devices_masking": "mask",
+                "navigator_masking": "mask",
+                "ports_masking": "mask",
+                "proxy_masking": "disabled",
+                "screen_masking": "mask",
+                "timezone_masking": "mask",
+                "webrtc_masking": "mask"
             }
         }
-                return payload
-            else:
-                payload = {
-            "browser_type": browser_type,
-            "os_type": "linux",
-            "automation": "selenium",
-            "parameters": {
-                "fingerprint": {
-                    "cmd_params": {
-                            "params": [
-                                {
-                                    "flag": "load-extension",
-                                    "value": extension_path
-                                }
-                            ]
-                    }
-                },
-                "flags": {
-                    "audio_masking": "mask",
-                    "fonts_masking": "mask",
-                    "geolocation_masking": "mask",
-                    "geolocation_popup": "prompt",
-                    "graphics_masking": "mask",
-                    "graphics_noise": "mask",
-                    "localization_masking": "mask",
-                    "media_devices_masking": "mask",
-                    "navigator_masking": "mask",
-                    "ports_masking": "mask",
-                    "proxy_masking": "disabled",
-                    "screen_masking": "mask",
-                    "timezone_masking": "mask",
-                    "webrtc_masking": "mask"
-                }
-            }
-        }
-                return payload
-        
-        payload = get_payload(extension_path)
+    }
 
         try:
             response = requests.post(url="https://launcher.mlx.yt:45001/api/v2/profile/quick", headers=self.headers, json=payload)

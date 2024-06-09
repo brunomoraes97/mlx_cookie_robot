@@ -1,0 +1,53 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 3,
+  "name": "__MSG_extensionName__",
+  "description": "__MSG_extensionDescription__",
+  "default_locale": "en",
+  "version": "1.0.3",
+  "icons": {
+    "16": "assets/icons/16.png",
+    "48": "assets/icons/48.png",
+    "128": "assets/icons/128.png"
+  },
+  "permissions": [
+    "tabs",
+    "storage",
+    "declarativeNetRequestWithHostAccess",
+    "webNavigation",
+    "scripting"
+  ],
+  "host_permissions": ["<all_urls>"],
+  "background": {
+    "service_worker": "assets/js/bg.js",
+    "type": "module"
+  },
+  "options_ui": {
+    "page": "assets/settings.html"
+  },
+  "action": {
+    "default_popup": "assets/popup/popup.html",
+    "default_icon": {
+      "16": "assets/icons/16.png",
+      "32": "assets/icons/32.png"
+    }
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://*/*"],
+      "js": ["assets/js/content.js"],
+      "run_at": "document_start",
+      "all_frames": true
+    }
+  ],
+  "declarative_net_request": {
+    "rule_resources": [
+      {
+        "id": "ruleset_1",
+        "enabled": true,
+        "path": "rules.json"
+      }
+    ]
+  }
+}

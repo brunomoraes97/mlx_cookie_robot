@@ -1,0 +1,10 @@
+{
+   "extensionDescription": {
+      "description": "Description of the extension.",
+      "message": "No one likes cookie banners, but they are everywhere. Remove annoying banners that ask you to accept all cookies."
+   },
+   "extensionName": {
+      "description": "Name of the extension.",
+      "message": "Cookies Block"
+   }
+}
