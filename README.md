@@ -2,7 +2,15 @@
 
 This is a tool for automatically visiting determined websites in order to collect cookies from them. You can either start a quick browser profile to do this, or start an existing browser profile.
 
-## Instructions
+## First time? Run in guided mode!
+
+Simply run the script in guided mode, it will prompt you whatever it needs to start.
+
+```bash
+python main.py --guided
+```
+
+## Instructions for non-guided mode
 
 ### Start your Multilogin X agent
 
@@ -23,11 +31,12 @@ Start-Process -FilePath "~/AppData/Local/Multilogin X/agent.exe"
 ### Edit the .env file
 
 ```env
-MLX_EMAIL=add your multilogin x email address here
-MLX_PASSWORD=add your multilogin x password here
-PROFILE_TYPE=normal OR quick
-PROFILE_ID=paste the profile ID here
-FOLDER_ID=paste the folder ID of the group that profile belongs to
+MLX_EMAIL=yourmultiloginaccount@domain.com
+MLX_PASSWORD=SuperSecretPassword
+PROFILE_TYPE=quick
+PROFILE_ID=
+FOLDER_ID=
+BROWSER_TYPE=stealthfox
 ```
 ### Edit the websites list
 
