@@ -31,7 +31,7 @@ class CookieRobot:
         self.mlx = Mlx(email_address, password, token)
         self.browser_type = browser_type
 
-    def allow_cookies_sf(self):
+    def allow_cookies(self):
         driver = self.driver
         wait = WebDriverWait(driver, 20)
         time.sleep(10)
@@ -48,8 +48,8 @@ class CookieRobot:
         driver.close()
 
     def automation(self):
-
-        self.allow_cookies_sf()
+        if self.profile_type == "quick":
+            self.allow_cookies()
         main_handle = self.driver.window_handles[0]
         self.driver.switch_to.window(main_handle)
 
@@ -114,7 +114,7 @@ class CookieRobot:
                 profile_started = False
                 while not profile_started:
                     self.profile_id, self.profile_port, profile_started, message = self.mlx.\
-                        start_normal_profile(self.token, self.profile_id, self.folder_id)
+                        start_normal_profile(self.profile_id, self.folder_id)
                     if profile_started:
                         return
                     print(f"Profile couldn't be started. Probably downloading core. Will wait for 60 seconds and try again. Here is the message: {message}")
@@ -183,14 +183,20 @@ if __name__ == "__main__":
 
         EMAIL = os.getenv("MLX_EMAIL")
         PASSWORD = os.getenv("MLX_PASSWORD")
-        TYPE = os.getenv("PROFILE_TYPE")
         EXTENSION = os.getenv("EXTENSION_PATH")
         BROWSER = os.getenv("BROWSER_TYPE")
+        TYPE = os.getenv("PROFILE_TYPE")
+        PROFILE_ID = os.getenv("PROFILE_ID")
+        FOLDER_ID = os.getenv("FOLDER_ID")
+
 
     bot = CookieRobot(email_address=EMAIL,
                       password=PASSWORD,
                       websites=WEBSITES,
                       profile_type=TYPE,
-                      browser_type=BROWSER)
+                      browser_type=BROWSER,
+                      profile_id=PROFILE_ID,
+                      folder_id=FOLDER_ID
+    )
     
     bot.run()
